@@ -1,26 +1,40 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Teszt;
 using System;
-using System.IO;
+using KörHenger;
 
-namespace Teszt_UnitTeszt
+namespace KorHenger_UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class Kör_Teszt
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Kerület_Teszt()
         {
-            string vartEredm = "Helló Cigány!";
+            // Arrange - Feltételek beállítása
+            double sugár = 5;
+            Kör kör = new Kör(sugár);
+            double vártEredm = 31.42;
 
-            using (var SW = new StringWriter())
-            {
-                Console.SetOut(SW);
-                Program.Main();
-                var kapottErdm = SW.ToString().Trim();
+            // Act - Végrehajtás
+            kör.SetKerület();
+            double kapottEredm = kör.GetKerület();
+            // Assert - Kiértékelés
+            Assert.AreEqual(vártEredm, kapottEredm);
+        }
+        [TestMethod]
+        public void Terület_teszt()
+        {
+            // Arrange - Feltételek beállítása
+            double sugár = 5;
+            Kör kör = new Kör(sugár);
+            double vártEredm = 78.54;
 
-                Assert.AreEqual(vartEredm, kapottErdm);
-            }
+            // Act - Végrehajtás
+            kör.SetTerület();
+            double kapottEredm = kör.GetTerület();
+
+            // Assert - Kiértékelés
+            Assert.AreEqual(vártEredm, kapottEredm);
         }
     }
 }
