@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{305F7E20-ED61-44DC-AD23-1E4903EC4ACD}</ProjectGuid>
+    <ProjectGuid>{DACFC625-B93C-453C-B45F-19A4304CC82D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Korhenger</RootNamespace>
-    <AssemblyName>Korhenger</AssemblyName>
+    <RootNamespace>KorTDD</RootNamespace>
+    <AssemblyName>KorTDD</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atvalt.cs" />
-    <Compile Include="Kor.cs" />
+    <Compile Include="KorClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
